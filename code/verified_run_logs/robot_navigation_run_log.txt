@@ -1,0 +1,9 @@
+Initial distance to target: 76.322 m
+t=  1.0s: distance to moving target = 0.0103 m, min distance to any obstacle = 14.6378 m
+t=  2.0s: distance to moving target = 0.0016 m, min distance to any obstacle = 11.9656 m
+t=  5.0s: distance to moving target = 0.0000 m, min distance to any obstacle = 17.9939 m
+t= 10.0s: distance to moving target = 0.0000 m, min distance to any obstacle = 17.1238 m
+t= 20.0s: distance to moving target = 0.0000 m, min distance to any obstacle = 23.6283 m
+t= 30.0s: distance to moving target = 0.0000 m, min distance to any obstacle = 17.5707 m
+Closest robot-obstacle approach over the whole run: 1.5324 m (obstacle #5 at t=23.05s)
+Robot stayed within the [0,100]x[0,100] map bounds for the entire run: True

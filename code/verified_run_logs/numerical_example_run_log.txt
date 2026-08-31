@@ -1,0 +1,38 @@
+
+=== Figure 1 (vary alpha) diagnostics ===
+alpha=    2: |grad_v Upsilon| at checkpoints -> t=0.001s:4.385e+00, t=0.1s:3.651e+00, t=0.2s:3.003e+00, t=0.5s:1.651e+00, t=1.0s:6.073e-01, t=3.0s:9.165e-01, t=5.0s:1.682e-02
+           final |grad_v Upsilon|_2 = 1.682e-02; max constraint value for t>=0.3s = 0.0124
+alpha=   20: |grad_v Upsilon| at checkpoints -> t=0.001s:4.255e+00, t=0.1s:6.057e-01, t=0.2s:8.448e-02, t=0.5s:9.819e-04, t=1.0s:2.316e-07, t=3.0s:3.662e-09, t=5.0s:3.684e-10
+           final |grad_v Upsilon|_2 = 3.683e-10; max constraint value for t>=0.3s = 0.0006
+alpha=  100: |grad_v Upsilon| at checkpoints -> t=0.001s:3.724e+00, t=0.1s:5.324e-03, t=0.2s:2.734e-03, t=0.5s:5.428e-05, t=1.0s:2.679e-08, t=3.0s:2.471e-09, t=5.0s:1.590e-09
+           final |grad_v Upsilon|_2 = 1.588e-09; max constraint value for t>=0.3s = 0.0006
+alpha= 1000: |grad_v Upsilon| at checkpoints -> t=0.001s:8.306e-01, t=0.1s:4.937e-04, t=0.2s:2.565e-04, t=0.5s:4.293e-06, t=1.0s:2.474e-09, t=3.0s:3.517e-09, t=5.0s:3.389e-10
+           final |grad_v Upsilon|_2 = 3.385e-10; max constraint value for t>=0.3s = 0.0005
+alpha= 5000: |grad_v Upsilon| at checkpoints -> t=0.001s:1.140e-03, t=0.1s:9.819e-05, t=0.2s:5.103e-05, t=0.5s:8.498e-07, t=1.0s:1.501e-09, t=3.0s:1.280e-09, t=5.0s:4.266e-10
+           final |grad_v Upsilon|_2 = 4.261e-10; max constraint value for t>=0.3s = 0.0004
+
+=== Figure 2 (vary initialization) diagnostics ===
+Starting points v(0) (10 SPs, seed=0): (0.411,-0.691); (-1.377,-1.450); (0.940,1.238); (0.320,0.688); (0.131,1.305); (0.948,-1.492); (1.072,-1.399); (0.689,-0.973); (1.090,0.124); (-3.000,4.000)
+Initial constraint slack max_i(A_i(0)v(0)-d_i(0)) across SPs: min=0.0000, max=1.0000 (<=0 means feasible at t=0 for every SP)
+  t= 0.1s: worst-case |grad_v Upsilon| across 10 SPs = 2.054e+00, worst-case constraint value = -0.9196
+  t= 0.2s: worst-case |grad_v Upsilon| across 10 SPs = 2.898e-01, worst-case constraint value = -0.8554
+  t= 0.3s: worst-case |grad_v Upsilon| across 10 SPs = 4.475e-02, worst-case constraint value = -0.6279
+  t= 0.5s: worst-case |grad_v Upsilon| across 10 SPs = 1.811e-03, worst-case constraint value = -0.7391
+  t= 1.0s: worst-case |grad_v Upsilon| across 10 SPs = 4.734e-07, worst-case constraint value = -1.3676
+  t= 1.5s: worst-case |grad_v Upsilon| across 10 SPs = 6.130e-08, worst-case constraint value = -0.3245
+  t= 2.0s: worst-case |grad_v Upsilon| across 10 SPs = 1.286e+00, worst-case constraint value = 0.0002
+  t= 2.5s: worst-case |grad_v Upsilon| across 10 SPs = 6.965e-05, worst-case constraint value = -1.9513
+  t= 3.0s: worst-case |grad_v Upsilon| across 10 SPs = 3.122e-09, worst-case constraint value = -2.0030
+Gradient-error reduction across SPs (t=0 to t=3.0s): min=8.92, max=9.70 orders of magnitude
+
+=== Figure 3 (baseline comparison) diagnostics ===
+LBFN: constraint exceeds 1e-4 during 2 window(s) (peak violation 5.325e-03), first few windows: [1.57,1.98]s, [7.83,7.85]s
+LBFN: final |grad_v Upsilon| at t=12.0s = 1.448e-09, median over [2,12.0]s = 6.704e-09
+AS: constraint exceeds 1e-4 during 1 window(s) (peak violation 3.678e-03), first few windows: [1.60,1.70]s
+AS: final |grad_v Upsilon| at t=12.0s = 1.321e-01, median over [2,12.0]s = 2.303e-03
+SeDuMi: constraint exceeds 1e-4 during 2 window(s) (peak violation 6.717e-01), first few windows: [1.59,2.05]s, [7.84,8.35]s
+SeDuMi: final |grad_v Upsilon| at t=12.0s = 1.267e-01, median over [2,12.0]s = 7.959e-03
+CGD: constraint exceeds 1e-4 during 1 window(s) (peak violation 1.090e-01), first few windows: [1.68,1.84]s
+CGD: final |grad_v Upsilon| at t=12.0s = 3.460e-01, median over [2,12.0]s = 2.473e-01
+NF: constraint exceeds 1e-4 during 2 window(s) (peak violation 4.667e-01), first few windows: [1.61,2.04]s, [7.84,8.03]s
+NF: final |grad_v Upsilon| at t=12.0s = 2.247e-01, median over [2,12.0]s = 2.555e-01
