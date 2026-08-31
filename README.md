@@ -29,7 +29,7 @@ pdflatex main.tex   # run twice to resolve cross-references and citation numbers
 
 ## Code
 
-`code/` contains a Python (NumPy/SciPy/Matplotlib) reference implementation of the LBFN model and all five baselines (AS, SQP, SeDuMi-style interior point, CGD, NF), plus scripts that reproduce the qualitative behavior of Figures 1-4. See `code/README.md` for details, setup, and a note on fidelity to the originally published figures. Once this repository is public, consider updating the manuscripts' Data/Code Availability statements (currently "available upon reasonable request") to point here instead.
+`code/` contains a Python (NumPy/SciPy/Matplotlib) reference implementation of the LBFN model and all five baselines (AS, SQP, SeDuMi-style interior point, CGD, NF), plus scripts that reproduce the qualitative behavior of Figures 1-4. See `code/README.md` for details, setup, and a note on fidelity to the originally published figures. Both manuscripts' Data/Code Availability statements point to this repository (https://github.com/yzhou364/LBFN); make the repository public before journal submission so that editors and reviewers can access it.
 
 ## Citation
 
